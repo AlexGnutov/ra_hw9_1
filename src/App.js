@@ -1,5 +1,5 @@
 import * as React from "react";
-import {BrowserRouter, Routes, Route,} from "react-router-dom";
+import {Routes, Route, HashRouter,} from "react-router-dom";
 import Main from "./components/main";
 import HomePage from "./components/pages/home-page";
 import DriftPage from "./components/pages/drift-page";
@@ -8,7 +8,7 @@ import ForzaPage from "./components/pages/forza-page";
 
 export default function App() {
     return (
-        <BrowserRouter>
+        <HashRouter>
             <Routes>
                 <Route path="/" element={<Main/>}>
                     <Route index path="/" element={<HomePage/>}/>
@@ -17,6 +17,6 @@ export default function App() {
                     <Route path="forza" element={<ForzaPage/>}/>
                 </Route>
             </Routes>
-        </BrowserRouter>
+        </HashRouter>
     );
 }
